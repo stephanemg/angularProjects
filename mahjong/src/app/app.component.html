@@ -1,0 +1,31 @@
+<!--The content below is only a placeholder and can be replaced.-->
+<div class="container">
+  <div class="row">
+    <div class="col-12">
+      <div *ngFor="let item of arr1" class="bright">
+        <div (click)="onClick(item)">
+          <div *ngIf="item.turn==false">
+            <img src="assets/{{item.assetNumber}}.png" />
+          </div>
+          <div *ngIf="item.turn==true">
+            <img src="assets/green.png" />
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-12">
+        <div *ngFor="let item2 of arr2" class="bright">
+            <div (click)="onClick(item2)">
+              <div *ngIf="item2.turn==false">
+                <img src="assets/{{item2.assetNumber}}.png" />
+              </div>
+              <div *ngIf="item2.turn==true">
+                <img src="assets/green.png" />
+              </div>
+            </div>
+          </div>
+    </div>
+  </div>
+</div>
