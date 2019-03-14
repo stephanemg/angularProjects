@@ -1,0 +1,22 @@
+<div class="container">
+  <div *ngFor="let i of tiles1">
+    <div *ngIf="i.turn == false" (click)="onClick(i)">
+      <img src="./assets/{{ i.assetNumber }}.jpg" width="80">
+    </div>
+    <div *ngIf="i.turn == true" (click)="onClick(i)">
+      <img src="./assets/concealed.jpg" width="80">
+    </div>
+  </div>
+  <div *ngFor="let j of tiles2">
+    <div>
+      <div *ngIf="j.turn == false" (click)="onClick(j)">
+        <img src="./assets/{{ j.assetNumber }}.jpg" width="80">
+      </div>
+      <div *ngIf="j.turn == true" (click)="onClick(j)">
+        <img src="./assets/concealed.jpg" width="80">
+      </div>
+    </div>
+  </div>
+</div>
+<br><br>
+<div id="demo"><button id="btnTricher" (click)="onTriche()">Tricher</button></div>
