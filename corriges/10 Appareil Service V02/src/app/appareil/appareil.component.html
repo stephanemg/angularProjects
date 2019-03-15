@@ -1,0 +1,22 @@
+<li [ngClass]="{ 
+'list-group-item' : true, 
+'list-group-item-success' : appareil.status==='allumé',
+'list-group-item-danger': appareilStatus=='éteint'
+ }"  >
+  <h4 [ngStyle]="{color: getColor()}">{{appareil.name}}</h4>
+   {{appareil.status}}
+  <!-- 
+   <button class="btn btn-success"
+   *ngIf="appareil.status=='éteint'" 
+   (click)="onAllumer()">ON</button>
+   &nbsp;
+   <button class="btn btn-danger"
+   *ngIf="appareil.status=='allumé'"
+   	(click)="onEteindre()">OFF</button>
+-->
+<button class="btn" (click)="onSwitch()" 
+	[ngClass]="{'btn-success': appareil.status=='éteint',
+				 'btn-danger' : appareil.status=='allumé'}"
+>{{ getNomButton() }}</button>
+
+</li>

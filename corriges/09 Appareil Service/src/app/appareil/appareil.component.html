@@ -1,0 +1,8 @@
+<li [ngClass]="{ 
+'list-group-item' : true, 
+'list-group-item-success' : appareil.status==='allumé',
+'list-group-item-danger': appareilStatus=='éteint'
+ }"  >
+  <h4 [ngStyle]="{color: getColor()}">{{appareil.name}}</h4>
+   {{appareil.status}}
+</li>

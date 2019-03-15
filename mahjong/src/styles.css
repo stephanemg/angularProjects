@@ -1,9 +1,0 @@
-.bright {
-    float:left;
-    background-color: white;
-    display: inline-block;
-
-}
-.bright img:hover {
-    opacity: .5;
-}

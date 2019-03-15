@@ -1,0 +1,71 @@
+<div class="container">
+
+  <div class="row">
+    <div class="col-md-8">
+      <div class="divTeam">
+        Equipe :
+        <input type="text" id="team" [(ngModel)]="nomEquipe">
+        <a class="btn btn-success" id="btnAddTeam" role="button" (click)="ajouteEquipe()">
+          <span class="glyphicon glyphicon-plus"></span>
+          Ajouter une equipe
+        </a>
+
+      </div>
+      <div id="demo"></div>
+      <h1>Mes Equipes</h1>
+      <ul>
+        <app-equipe *ngFor="let a of entreprise.tabEquipe;let i = index" [equipe]="a" [index]="i">
+        </app-equipe>
+      </ul>
+    </div>
+    <div class="col-md-4">
+      <div class="divUser">
+        <form (ngSubmit)="onAjouterPersonne(a)" #a="ngForm">
+          <table>
+            <tr>
+              <td>Nom :</td>
+              <td><input type="text" name="nomPersonne" ngModel /></td>
+            </tr>
+            <tr>
+              <td>Prenom :</td>
+              <td><input type="text" name="prenomPersonne" ngModel /></td>
+            </tr>
+
+            <tr>
+              <td>Team :</td>
+              <td><select name="idEquipe" ngModel>
+                  <option *ngFor="let c of entreprise.tabEquipe" [ngValue]="c.idEquipe">{{c.nomEquipe}}</option>
+                </select></td>
+            </tr>
+            <tr>
+              <td>&nbsp;</td>
+              <td>
+                <button type="submit">Ajouter Personne</button>
+              </td>
+            </tr>
+          </table>
+        </form>
+
+      </div><!-- divUser -->
+
+
+
+      <div class="divListUser">
+          <table class="table table-striped" data-id='+teamId+'>
+              <th>Nom</th><th>Prenom</th><th>Action</th>
+              <tr  *ngFor="let a of entreprise.tabPersonne">
+                  <td>{{a.nom}}</td>
+                  <td>{{a.prenom}}</td>
+                  <td>
+                      <button class="btn btn-primary btnDelTeam" (click)="onDeletePersonne(a.idPersonne)">
+                          <span class="glyphicon glyphicon-trash"></span>
+                          </button>
+                  </td>
+              </tr>
+              </table>
+      </div>
+
+    </div> <!-- col4 -->
+  </div><!-- row -->
+
+</div><!-- container -->

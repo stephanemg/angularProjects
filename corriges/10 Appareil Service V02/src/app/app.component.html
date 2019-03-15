@@ -1,0 +1,26 @@
+<div class="container">
+	<div class="row">
+		<div class="col-sm-6">
+<h1>Mes Appareils</h1>
+<ul class="list-group">
+	<app-appareil *ngFor="let a of tabAppareil;let i = index"
+	[appareil]="a"  [index]="i">
+	  
+	</app-appareil>
+</ul>
+<br><br>
+
+	<button class="btn btn-success" 
+	
+		(click)="onAllumer()"
+	>ON</button>
+	&nbsp;&nbsp;
+	<button class="btn btn-danger"
+	
+		(click)="onEteindre()"
+	>OFF</button>
+
+
+</div>
+</div>
+</div>

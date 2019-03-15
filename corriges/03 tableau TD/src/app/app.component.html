@@ -1,0 +1,12 @@
+<h1> les tableaux</h1>
+
+<button (click)="onAction()">
+  OK
+</button>
+
+<table>
+  <tr *ngFor="let f of tableau; let i =index">
+    <td>{{ i }}</td>
+    <td>{{ f }}</td>
+  </tr>
+</table>

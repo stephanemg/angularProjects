@@ -1,0 +1,31 @@
+<div class="container">
+  <div class="row">
+    <div class="col-sm-12">
+      <h1>Ma playlist</h1>
+      <ul class="list-group">
+        <li *ngFor="let item of playlistFilms">
+          <img src="{{item.url}}" />
+        </li>
+      </ul>
+    </div>
+  </div>
+</div>
+
+<input type="text" [(ngModel)]="film" placeholder="Enter film id">
+<button (click)="onRecherche()">
+  OK
+</button>
+<div class="container">
+  <div class="row">
+    <div class="col-sm-12">
+      <h1>Résultat</h1>
+      <ul class="list-group">
+        <li *ngFor="let item of arrFilms" (click)="ajoutePlaylist(item)">
+          <!-- todo : gestion du hover avec kevin -->
+          <div class="highlight"></div>
+            <img src="{{item.url}}" />
+        </li>
+      </ul>
+    </div>
+  </div>
+</div>

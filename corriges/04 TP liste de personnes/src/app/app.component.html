@@ -1,0 +1,32 @@
+
+<div class="container">
+  <div class="row">
+    <div class="col-sm-12">
+<h1>Liste de Personnes</h1>
+
+<input [(ngModel)]="nom" placeholder="Nom">
+<br><br>
+<input [(ngModel)]="prenom" placeholder="Prénom">
+<br><br>
+<button class="btn btn-danger"
+(click)="onAjouter()">Add</button>
+<table class="table table-striped">
+  <tr>
+    <th>Nom</th>
+    <th>Prénom</th>
+    <th>Action</th>
+</tr>
+<tr *ngFor="let p of tableau;let i = index">
+  <td>{{p.nom}}</td>
+  <td>{{p.prenom}}</td>
+  <td>
+    <button class="btn btn-primary"
+    (click)="onDelete(i)"
+    >del
+    </button>  
+  </td>
+</tr>
+</table>
+</div>
+</div>
+</div>

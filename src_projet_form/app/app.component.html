@@ -1,0 +1,7 @@
+<form (ngSubmit)="onAjouterPersonne(a)" #a="ngForm">
+  <!-- on recupere les valeurs saisies dans les champs via ngmodel -->
+  <input type="text" name="prenom" ngModel><br><br>
+  <input type="text" name="nom" ngModel><br><br>
+  <button type="submit">OK</button>
+</form>
+<pre> {{person | json}} </pre>

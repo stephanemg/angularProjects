@@ -1,0 +1,19 @@
+<table>
+	<tr>
+		<td *ngFor="let f of tabFav">
+			<img src="{{ f.Poster }}" width="100">
+		</td>
+	</tr>
+</table>
+
+<input [(ngModel)]="titre" >
+<button (click)="onRecherche()">OK</button>
+
+<table>
+	<tr *ngFor="let f of tab;let i = index">
+		<td><a href="#" (click)="onAjouter(i)">
+			<img src="{{ f.Poster }}" width="100">
+			</a>
+		</td>
+	</tr>
+</table>

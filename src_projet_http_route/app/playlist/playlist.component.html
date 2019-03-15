@@ -1,0 +1,12 @@
+<div class="container">
+  <div class="row">
+    <div class="col-sm-12">
+      <h1>Ma playlist</h1>
+      <ul class="list-group">
+        <li *ngFor="let item of playlistFilms">
+          <img src="{{item.url}}" />
+        </li>
+      </ul>
+    </div>
+  </div>
+</div>

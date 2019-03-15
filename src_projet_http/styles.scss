@@ -1,0 +1,21 @@
+ul::after {
+content:"";
+display:block;
+clear:both;
+}
+
+ul{
+    //background-color:green;
+    list-style: none;
+}
+
+img {
+    height:300px;
+    width:auto;
+    padding: 10px;
+}
+
+li {
+    float:left;
+}
+

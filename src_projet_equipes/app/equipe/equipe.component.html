@@ -1,0 +1,23 @@
+<br><br>
+<table class="table table-striped" data-id='+teamId+'>
+<tr>
+<td colspan=3>
+	<h3>{{equipe.nomEquipe}}
+ <button class="btn btn-primary btnDelTeam" (click)="onDelete()">
+	<span class="glyphicon glyphicon-trash"></span>
+</button>
+</h3>
+</td></tr>
+		<table class="table table-striped" data-id='+teamId+'>
+		<th>Nom</th><th>Prenom</th><th>Action</th>
+		<tr  *ngFor="let a of equipe.personnes">
+				<td>{{a.nom}}</td>
+				<td>{{a.prenom}}</td>
+				<td>
+						<button class="btn btn-primary btnDelTeam" (click)="onDeletePersonne(a.idPersonne)">
+								<span class="glyphicon glyphicon-trash"></span>
+								</button>
+				</td>
+		</tr>
+		</table>
+</table>

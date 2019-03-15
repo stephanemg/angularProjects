@@ -1,0 +1,17 @@
+<div class="container">
+  <div class="row">
+ <div class="clo-sm-12">
+<h1>Calcul IMC</h1>
+
+<input [(ngModel)]="poids" placeholder="poids en kg">
+<br><br>
+<input [(ngModel)]="taille" placeholder="taille en m">
+<br><br>
+<button class="btn btn-primary" (click)="onCalcul()">
+  OK
+</button>
+<h3>{{ imc }}</h3>
+<h4>{{ tranche }}</h4>
+</div>
+</div>
+</div>

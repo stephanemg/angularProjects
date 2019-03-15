@@ -1,0 +1,91 @@
+<div class="container">
+      
+      <div class="row">
+        <div class="col-md-8">
+        <div class="divTeam">
+          Equipe : 
+          <input type="text" [(ngModel)]="nomEquipe" >
+          &nbsp;
+          <button class="btn btn-success" 
+                 (click)="onAjouterEquipe()">
+                <span class="glyphicon glyphicon-plus"></span>
+                Ajouter une equipe
+              </button>
+              
+        </div>
+        <div id="demo">
+          <app-equipe 
+          *ngFor="let e of entreprise.tabEquipe;let i = index"
+          [equipe]="e" [index]="i"
+           >
+            
+          </app-equipe>
+
+        </div>
+        </div>
+        <div class="col-md-4">
+        <div class="divUser">
+          <table>
+            <tr>
+              <td>Nom :</td>
+              <td><input type="text" id="nom" /></td>
+            </tr>
+            <tr>
+              <td>Prenom :</td>
+              <td><input type="text" id="prenom" /></td>
+            </tr>
+            
+            <tr>
+              <td>Team :</td>
+              <td><select id="MyUserTeam">
+              <option value="0"></option>   
+              </select></td>
+            </tr>
+
+            <tr>
+              <td>&nbsp;</td>
+              <td>
+              <a class="btn btn-success" 
+                id="btnAddUser" role="button">
+                <span class="glyphicon glyphicon-plus"></span>
+                Ajouter une personne
+              </a>
+            </td>
+            </tr>
+          </table>
+        </div><!-- divUser -->  
+        
+        
+        
+        <div class="divListUser">
+          
+          <table id="tabListUser">
+          <!--
+            <tr data-id="1">
+              <td>  John Doe
+              </td>
+            <td><a class="btn btn-warning" 
+                id="btnAddTeam" role="button">
+          <span class="glyphicon glyphicon-trash">
+              </span></a>
+            </td>
+          </tr>
+
+          <tr data-id="1">
+              <td>  bob
+              </td>
+            <td><a class="btn btn-warning" 
+                id="btnAddTeam" role="button">
+          <span class="glyphicon glyphicon-trash">
+              </span></a>
+            </td>
+          </tr>
+        -->
+        </table>
+          </div>
+        
+      </div>  <!-- col4 -->
+      </div><!-- row -->
+      
+    </div><!-- container -->
+

@@ -1,0 +1,22 @@
+<h1>Les Tableaux</h1>
+Nom :
+<input [(ngModel)]="nom" placeholder="Entrez le nom"/><br>
+Prenom :
+<input [(ngModel)]="prenom" placeholder="Entrez le prenom"/><br>
+<button class="btn btn-danger" (click)="onAdd()">
+  Ajoute
+</button>
+<table class="col-sm-12">
+  <tr>
+    <th>Nom</th>
+    <th>Prenom</th>
+  </tr>
+  <tr *ngFor="let f of tableau; let i = index">
+    <td> {{ f.prenom }}</td>
+    <td>{{ f.nom }}</td>
+    <td>
+      <button class="btn btn-primary" (click)="onDelete(i)">
+        Efface
+      </button></td>
+  </tr>
+</table>
