@@ -1,0 +1,35 @@
+<div class="container">
+  <div id="root">
+    <div *ngFor="let i of cases; let k = index">
+      <div *ngIf="k % 3 == 0" class="row">
+        <div *ngIf="cases[k].turn == false" (click)="onClick(cases[k])">
+          <img src="./assets/blank.png" width="80" />
+        </div>
+        <div *ngIf="cases[k].turn == true && cases[k].type == 1" (click)="onClick(cases[k])">
+          <img src="./assets/croix.png" width="80" />
+        </div>
+        <div *ngIf="cases[k].turn == true && cases[k].type == 2" (click)="onClick(cases[k])">
+          <img src="./assets/rond.png" width="80" />
+        </div>
+        <div *ngIf="cases[k+1].turn == false" (click)="onClick(cases[k+1])">
+          <img src="./assets/blank.png" width="80" />
+        </div>
+        <div *ngIf="cases[k+1].turn == true && cases[k+1].type == 1" (click)="onClick(cases[k+1])">
+          <img src="./assets/croix.png" width="80" />
+        </div>
+        <div *ngIf="cases[k+1].turn == true && cases[k+1].type == 2" (click)="onClick(cases[k+1])">
+          <img src="./assets/rond.png" width="80" />
+        </div>
+        <div *ngIf="cases[k+2].turn == false" (click)="onClick(cases[k+2])">
+          <img src="./assets/blank.png" width="80" />
+        </div>
+        <div *ngIf="cases[k+2].turn == true && cases[k+2].type == 1" (click)="onClick(cases[k+2])">
+          <img src="./assets/croix.png" width="80" />
+        </div>
+        <div *ngIf="cases[k+2].turn == true && cases[k+2].type == 2" (click)="onClick(cases[k+2])">
+          <img src="./assets/rond.png" width="80" />
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
